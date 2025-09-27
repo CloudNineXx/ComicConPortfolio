@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bangers&family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Comic book style animations and effects */
+@keyframes comic-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes comic-shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+  20%, 40%, 60%, 80% { transform: translateX(2px); }
+}
+
+@keyframes comic-glow {
+  0%, 100% { 
+    text-shadow: 0 0 2px rgba(255, 255, 0, 0.3), 0 0 4px rgba(255, 255, 0, 0.2);
+  }
+  50% { 
+    text-shadow: 0 0 4px rgba(255, 255, 0, 0.4), 0 0 8px rgba(255, 255, 0, 0.3);
+  }
+}
+
+@keyframes comic-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1); }
+}
+
+/* Utility classes for comic effects */
+.comic-bounce {
+  animation: comic-bounce 4s infinite;
+}
+
+.comic-shake {
+  animation: comic-shake 0.5s infinite;
+}
+
+.comic-glow {
+  animation: comic-glow 2s ease-in-out infinite;
+}
+
+.comic-pop {
+  animation: comic-pop 1s ease-in-out infinite;
+}
+
+/* Comic book text effects */
+.comic-text {
+  text-shadow: 3px 3px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+}
+
+/* Halftone effect */
+.halftone {
+  background-image: 
+    radial-gradient(circle at 25% 25%, #000 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, #000 2px, transparent 2px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ffff00, #ff0000);
+  border-radius: 6px;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff0000, #ffff00);
+}
+
+/* Modern Comic Themed Custom Cursors */
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='none'%3E%3Cpath d='M2 2 L14 8 L8 10 L6 16 L2 2 Z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3Cpath d='M2 2 L14 8 L8 10 L6 16 L2 2 Z' fill='%23e5e5e5'/%3E%3C/g%3E%3C/svg%3E") 2 2, auto;
+}
+
+/* Pointer cursor for interactive elements */
+button, a, [role="button"], .cursor-pointer {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cg fill='none'%3E%3Cpath d='M2 2 L18 10 L10 12 L8 20 L2 2 Z' fill='%23fff' stroke='%23000' stroke-width='2'/%3E%3Cpath d='M2 2 L18 10 L10 12 L8 20 L2 2 Z' fill='%234f46e5'/%3E%3Ccircle cx='20' cy='8' r='4' fill='%23fbbf24' stroke='%23000' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E") 2 2, pointer;
+}
+
+/* Text cursor for input fields */
+input, textarea, [contenteditable] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='32' viewBox='0 0 24 32'%3E%3Cg fill='none'%3E%3Crect x='10' y='0' width='4' height='32' fill='%23000'/%3E%3Crect x='6' y='0' width='12' height='4' fill='%23000'/%3E%3Crect x='6' y='28' width='12' height='4' fill='%23000'/%3E%3Cpath d='M2 8 L8 2 L8 6 L16 6 L16 2 L22 8' fill='%23ffff00' stroke='%23000' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E") 12 16, text;
+}
+
+/* Special hover effects for comic elements */
+.comic-cursor-pow:hover {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='32' viewBox='0 0 40 32'%3E%3Cg fill='none'%3E%3Cpath d='M20 4 L28 12 L24 12 L32 20 L24 20 L28 28 L20 24 L12 28 L16 20 L8 20 L16 12 L12 12 L20 4 Z' fill='%23ff0000' stroke='%23000' stroke-width='2'/%3E%3Ctext x='20' y='18' text-anchor='middle' font-family='Arial Black' font-size='8' fill='%23ffff00' stroke='%23000' stroke-width='0.5'%3EPOW!%3C/text%3E%3C/g%3E%3C/svg%3E") 20 16, pointer;
+}
+
+/* Grab cursor for draggable elements */
+.cursor-grab {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23000' stroke='%23ffff00' stroke-width='2'/%3E%3Cpath d='M8 12 L12 8 L16 12 L20 8 L24 12 L20 16 L24 20 L20 24 L16 20 L12 24 L8 20 L12 16 Z' fill='%23ffff00'/%3E%3C/g%3E%3C/svg%3E") 16 16, grab;
+}
+
+.cursor-grabbing {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23ff0000' stroke='%23000' stroke-width='2'/%3E%3Cpath d='M8 12 L12 8 L16 12 L20 8 L24 12 L20 16 L24 20 L20 24 L16 20 L12 24 L8 20 L12 16 Z' fill='%23ffff00'/%3E%3C/g%3E%3C/svg%3E") 16 16, grabbing;
+}
+
+/* Wait cursor */
+.cursor-wait {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='none'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23000' stroke='%23ffff00' stroke-width='2'/%3E%3Cpath d='M16 6 L20 10 L12 10 Z M16 26 L20 22 L12 22 Z M6 16 L10 12 L10 20 Z M26 16 L22 12 L22 20 Z' fill='%23ffff00'/%3E%3C/g%3E%3C/svg%3E") 16 16, wait;
+}
+
+/* Additional animations for Skills Section */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg); 
+  }
+}
+
+@keyframes spin-slow {
+  from { 
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes skill-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes skill-glow {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+/* Scroll-triggered animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUpStaggered {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility classes for scroll animations */
+.scroll-reveal-left {
+  animation: fadeInLeft 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.scroll-reveal-right {
+  animation: fadeInRight 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.scroll-reveal-up {
+  animation: fadeInUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.scroll-reveal-scale {
+  animation: fadeInScale 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUpStaggered 0.5s ease-out;
+}
+
+.animate-skill-pulse {
+  animation: skill-pulse 2s ease-in-out infinite;
+}
+
+.animate-skill-glow {
+  animation: skill-glow 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Enhanced shadow utilities for skill boxes */
+.shadow-comic {
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.shadow-comic-hover {
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0 0 0 4px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(255, 255, 0, 0.3);
+}
+
+/* Perspective utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Text shadow utilities */
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Blur utilities */
+.blur-xs {
+  filter: blur(2px);
+}
+
+/* World-Class Responsive Typography System */
+.typography-display {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.typography-heading-xl {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.typography-heading-lg {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.typography-heading-md {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.typography-heading-sm {
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.typography-body-xl {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+}
+
+.typography-body-lg {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+.typography-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+.typography-body-sm {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.typography-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.typography-button {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Comic Book Text Effects */
+.text-comic-shadow {
+  text-shadow: 
+    2px 2px 0px #000,
+    -1px -1px 0px #000,
+    1px -1px 0px #000,
+    -1px 1px 0px #000;
+}
+
+.text-comic-shadow-light {
+  text-shadow: 
+    1px 1px 0px rgba(0,0,0,0.6),
+    -1px -1px 0px rgba(0,0,0,0.6),
+    1px -1px 0px rgba(0,0,0,0.6),
+    -1px 1px 0px rgba(0,0,0,0.6);
+}
+
+.text-comic-outline {
+  -webkit-text-stroke: 1px #000;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.text-comic-glow {
+  text-shadow: 
+    0 0 10px currentColor,
+    0 0 20px currentColor,
+    0 0 30px currentColor;
+}
+
+/* Responsive Utility Classes */
+@layer utilities {
+  /* Container classes with responsive padding */
+  .container-responsive {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-responsive {
+      max-width: 640px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-responsive {
+      max-width: 768px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-responsive {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-responsive {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container-responsive {
+      max-width: 1536px;
+    }
+  }
+
+  /* Responsive spacing utilities */
+  .space-y-responsive > * + * {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .space-y-responsive > * + * {
+      margin-top: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .space-y-responsive > * + * {
+      margin-top: 2rem;
+    }
+  }
+
+  /* Responsive text sizing */
+  .text-responsive-sm {
+    font-size: 0.875rem;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-sm {
+      font-size: 1rem;
+    }
+  }
+
+  .text-responsive-base {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-base {
+      font-size: 1.125rem;
+    }
+  }
+
+  .text-responsive-lg {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: 640px) {
+    .text-responsive-lg {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .text-responsive-lg {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Mobile-first responsive padding */
+  .p-responsive {
+    padding: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .p-responsive {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .p-responsive {
+      padding: 2rem;
+    }
+  }
+
+  /* Mobile-first responsive margins */
+  .m-responsive {
+    margin: 0.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .m-responsive {
+      margin: 1rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .m-responsive {
+      margin: 1.5rem;
+    }
+  }
+
+  /* Responsive grid utilities */
+  .grid-responsive-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid-responsive-1 {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-responsive-1 {
+      gap: 2rem;
+    }
+  }
+
+  .grid-responsive-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .grid-responsive-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid-responsive-2 {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* Responsive flexbox utilities */
+  .flex-responsive-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .flex-responsive-col {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .flex-responsive-col {
+      gap: 2rem;
+    }
+  }
+}
+
+/* Enhanced mobile responsiveness for Comic elements */
+@media (max-width: 639px) {
+  .comic-text {
+    text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+  }
+  
+  .text-comic-shadow {
+    text-shadow: 
+      1px 1px 0px #000,
+      -1px -1px 0px #000,
+      1px -1px 0px #000,
+      -1px 1px 0px #000;
+  }
+}
