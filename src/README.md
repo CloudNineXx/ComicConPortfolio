@@ -1,6 +1,6 @@
 # 🦸‍♂️ Swee Ming's Comic Con Inspired Resume Website
 
-A world-class, award-winning resume website featuring a dynamic Comic Con superhero theme for **Swee Ming**, a Systems & Technology Executive, Gen AI Enthusiast, and Content Creator. This portfolio combines professional content with stunning comic book aesthetics while maintaining readability and professionalism across all devices.
+A world-class, award-winning resume website featuring a dynamic Comic Con theme for **Swee Ming**, a Systems & Technology Executive, Gen AI Enthusiast, and Content Creator. This portfolio combines professional content with stunning comic book aesthetics while maintaining readability and professionalism across all devices.
 
 ## 🌟 **Live Features Overview**
 
@@ -8,7 +8,7 @@ A world-class, award-winning resume website featuring a dynamic Comic Con superh
 - **Custom SVG Favicon**: Comic book inspired logo with "SM" initials
 - **Lightning Bolt Symbol**: Represents tech superhero powers
 - **Gradient Colors**: Yellow-to-red superhero gradient with black borders
-- **Browser Tab Title**: "Swee Ming | Tech Superhero Portfolio"
+- **Browser Tab Title**: "Swee Ming | Portfolio"
 
 ### 🧭 **Smart Navigation System**
 - **Hover-Activated Navbar**: Appears on mouse hover, stays hidden otherwise
@@ -383,26 +383,6 @@ npm run type-check
 npm run lint
 ```
 
-## 📞 **Contact & Collaboration**
 
-Interested in the technical implementation or want to collaborate on similar projects? 
 
-**Swee Ming** - Systems & Technology Executive  
-📧 **Email**: [Contact through website]  
-🐙 **GitHub**: [Portfolio Repository]  
-🎬 **YouTube**: Multiple channels showcasing tech content  
-💼 **LinkedIn**: Professional network and connections
-
----
-
-**Created with ❤️ and ⚡ by Swee Ming**  
-*Showcasing the intersection of technology, creativity, and professional excellence*
-
-### **Repository Stats**
-![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-5+-blue?style=for-the-badge&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-4+-blue?style=for-the-badge&logo=tailwindcss)
-![Performance](https://img.shields.io/badge/Performance-A+-green?style=for-the-badge)
-![Accessibility](https://img.shields.io/badge/A11y-WCAG%202.1%20AA-green?style=for-the-badge)
-
-*Last Updated: December 2024*
+**Created with ❤️  by Swee Ming**  
