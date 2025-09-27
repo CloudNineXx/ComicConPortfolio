@@ -56,7 +56,6 @@
     "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages",
-    "build": "vite build"
+    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
   }
 }
